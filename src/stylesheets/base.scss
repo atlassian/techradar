@@ -6,10 +6,10 @@
 @import 'header';
 @import 'footer';
 
-@import url(https://www.thoughtworks.com/css/screen.css);
+@import url(//aui-cdn.atlassian.com/aui-adg/6.0.6/css/aui.min.css);
 
 body {
-  font: 18px 'Open Sans';
+  // font: 18px 'Open Sans';
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
