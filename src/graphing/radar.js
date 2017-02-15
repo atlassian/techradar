@@ -402,7 +402,7 @@ const Radar = function (size, radar) {
         .attr('class', 'quadrant-table ' + quadrant.order);
 
 
-      d3.select('body').append('div')
+      header.append('div')
         .attr('class', 'button ' + quadrant.order + ' full-view')
         .text(quadrant.quadrant.name())
         .on('mouseover', mouseoverQuadrant.bind({}, quadrant.order))
