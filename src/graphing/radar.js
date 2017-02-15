@@ -370,19 +370,26 @@ const Radar = function (size, radar) {
 
   function plotRadarHeader() {
     var header = d3.select('body').insert('header', "#radar");
-    header.append('div')
-      .attr('class', 'radar-title')
+    header.append('nav')
+      .attr('class', 'aui-header aui-dropdown2-trigger-group')
+      .attr('role', 'navigation')
+      .attr('data-aui-responsive', 'true')
       .append('div')
-      .attr('class', 'radar-title__text')
-      .append('h2')
-      .text(document.title)
-      .style('cursor', 'pointer')
-      .on('click', redrawFullRadar);
+        .attr('class', 'aui-header-primary')
+        .append('h1')
+          .attr('class', 'aui-header-logo-textonly')
+            .append('a')
+              .attr('href', 'https://go/techradar')
+              .append('span')
+              .attr('class', 'aui-header-logo-device')
+              .text(document.title)
+              .style('cursor', 'pointer')
+              .on('click', redrawFullRadar);
 
-    header.select('.radar-title')
-      .append('div')
-      .attr('class', 'radar-title__logo')
-      .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>');
+    // header.select('.radar-title')
+    //   .append('div')
+    //   .attr('class', 'radar-title__logo')
+    //   .html('<a href="https://www.thoughtworks.com"> <img src="/images/logo.png" /> </a>');
 
     return header;
   }
@@ -395,7 +402,7 @@ const Radar = function (size, radar) {
         .attr('class', 'quadrant-table ' + quadrant.order);
 
 
-      header.append('div')
+      d3.select('body').append('div')
         .attr('class', 'button ' + quadrant.order + ' full-view')
         .text(quadrant.quadrant.name())
         .on('mouseover', mouseoverQuadrant.bind({}, quadrant.order))
