@@ -180,11 +180,11 @@ const GoogleSheet = function (sheetReference, sheetName) {
 
         set_document_title();
 
-        plotLogo(content);
+        //plotLogo(content);
 
         var bannerText = '<h1>Building your radar...</h1><p>Your Technology Radar will be available in just a few seconds</p>';
-        plotBanner(content, bannerText);
-        plotFooter(content);
+        //plotBanner(content, bannerText);
+        //plotFooter(content);
 
 
         return self;
